@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {{ if eq .Section "mylearn" }}
+        {{.Title}} | Learning center
+      {{ else }}
+        {{.Title}} | Knowledge base
+      {{ end }}
+    </title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href='/css/semantic.min.css'/>
+    <link rel="stylesheet" type="text/css" href='/css/homepage.css'/>
+    <link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+  <div class="ui container">
+    <br>
+    <a href="/"><img src="/images/logo.png"></a>
+    <div class="ui divider"></div>
+    <br>
+
+    <div class="ui grid">
+    	<div class="five wide column">
+        {{ partial "navigation.html" . }}
+      </div>
+      <div class="eleven wide column">
+        {{ partial "content.html" . }}
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="/js/semantic.min.js"></script>
+  <script>
+    $('.ui.embed').embed();
+  </script>
+  <script src="/js/prism.js"></script>
+</body>
+</html>
