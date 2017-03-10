@@ -12,5 +12,7 @@
 {{ if .Content }}
 
   {{ .Content }}
+  {{ partial "disqus.html" . }}
+
 
 {{ end }}
