@@ -3,4 +3,4 @@ read -p "Commit message: " message
 git add . && \
 git add -u && \
 git commit -m "$message" && \
-git push origin master
+git push --set-upstream origin erudinsky
