@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "CloudBerry Lab Knowledge Base"
-baseurl = "http://kb.cloudberrylab.com.s3-website.eu-west-2.amazonaws.com"
+baseurl = "http://kb.cloudberrylab.com"
 # theme = "mylearn"
 
 canonifyurls = true
