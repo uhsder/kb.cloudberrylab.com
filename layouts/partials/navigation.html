@@ -1,5 +1,50 @@
+{{ if eq .Section "mylearn" }}
+
+	<div class="ui ordered list">
+		{{ range .Site.Menus.mylearn }}
+			<li><a href="{{.URL}}">{{.Name}}</a></li>
+					{{ if .HasChildren }}
+					<ul>
+					{{ range .Children }}
+					<li><a href="{{.URL}}">{{ .Name }} </a></li>
+					{{ if .HasChildren }}
+						<ul>
+						{{ range .Children }}
+						<li><a href="{{.URL}}">{{ .Name }}</a></li>
+						{{ if .HasChildren }}
+							<ul>
+							{{ range .Children }}
+							<li><a href="{{.URL}}">{{ .Name }} </a></li>
+							{{ if .HasChildren }}
+								<ul>
+								{{ range .Children }}
+								<li><a href="{{.URL}}">{{ .Name }} </a></li>
+								{{ end }}
+								</ul>
+								{{ end }}
+							{{ end }}
+							</ul>
+							{{ end }}
+						{{ end }}
+						</ul>
+						{{ end }}
+					{{ end }}
+					</ul>
+					{{ end }}
+		{{end}}
+	</div>
+
+{{ end }}
+
 {{ if eq (relURL .URL) ("/" | safeHTML) }}
 	<h1>{{ $.Site.Param "h1" }}</h1>
 	<p>{{ $.Site.Param "description" }}</p>
 	<p>{{ $.Site.Param "mylearn" | safeHTML }}</p>
+{{ end }}
+
+{{ if ne (relURL .URL) ("/" | safeHTML) }}
+	{{ if ne .Section "mylearn" }}
+		<p>{{ $.Site.Param "description" }}</p>
+		<p>{{ $.Site.Param "mylearn" | safeHTML }}</p>
+	{{ end }}
 {{ end }}
