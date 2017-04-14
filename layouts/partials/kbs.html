@@ -2,7 +2,7 @@
 
 <div class="ui four column grid stackable">
 
-  {{ range where .Data.Pages.ByWeight "Section" "!=" "mylearn" }}
+  {{ range (sort .Data.Pages) ".Params.kbid"  "Section" "!=" "mylearn" }}
   <div class="column">
     <div class="ui card" style="min-height: 400px;">
       <div class="content">
