@@ -83,3 +83,27 @@
   padding: 20px 30px;
   outline: none;
 }
+
+article img {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 5px solid #F2711C;
+  margin: 20px 0;
+}
+
+blockquote p {
+  font-size: 1em;
+  padding: 10px;
+}
+
+.forkme {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background-image: url('/images/fork-me.png');
+}
