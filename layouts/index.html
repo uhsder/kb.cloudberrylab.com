@@ -45,29 +45,22 @@
     <br>
 
     <div class="ui grid stackable">
-    	<div class="five wide column">
+    	<div class="four wide column">
         {{ partial "navigation.html" . }}
       </div>
-      <div class="eleven wide column">
+      <div class="twelve wide column">
         {{ partial "content.html" . }}
 
         {{ partial "kbs.html" . }}
       </div>
     </div>
   </div>
-  <footer style="padding: 100px; background: #383839; text-align: center; width: 100%;">
-      <i class="user icon" style="font-size: 5em; color: white; line-height: 1em;"></i>
-      <h2 style="font-weight: bold; color: #f6871f;">Customer support</h2>
-      <p style="color: #fff">Can’t find what you need? Give us a call.</p>
-      <p style="color: #fff">—</p>
-      <h5 style="color: #fff">1.212.863.9918</h5>
-      <p style="color: #fff">M – F, 8am to 6pm</p>
-  </footer>
+
+  {{ partial "footer.html" . }}
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="js/semantic.min.js"></script>
+  <script src="../js/semantic.min.js"></script>
   <script>
     $('.ui.embed').embed();
   </script>
-
 </body>
 </html>

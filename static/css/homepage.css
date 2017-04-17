@@ -107,3 +107,11 @@ blockquote p {
   height: 100px;
   background-image: url('/images/fork-me.png');
 }
+
+code {
+  padding: .3em!important;
+}
+
+span {
+  border-bottom: 1px #000 dashed;
+}
