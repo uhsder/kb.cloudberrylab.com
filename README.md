@@ -9,7 +9,7 @@ Welcome to CloudBerry Lab knowledge base (available (here)[http://kb.cloudberryl
 Fork the project and make changes as follows:
 
 * `images` - create subfolder `kb<number>` and place all your images.
-* `content` - create file with `kb<number.md` and place your content. Check previous KB to get list of required fields. Essentially the following fields required:
+* `content` - create file with `kb<number>.md` and place your content. Check previous KB to get list of required fields. Essentially the following fields required:
 
 ---
 * date        : `<Date in the following format 2016-05-16T22:17:00+02:00>`
