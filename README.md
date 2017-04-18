@@ -19,4 +19,4 @@ Fork the project and make changes as follows:
 * author      : `<your name>`
 * kbid        : `<four digits number>`
 
-We accept pull requests, please add description.
+We accept pull requests, please add description!
