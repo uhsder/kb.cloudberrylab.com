@@ -99,7 +99,7 @@ blockquote p {
 }
 
 .forkme {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   right: 0;
   top: 0;
@@ -114,4 +114,7 @@ code {
 
 span {
   border-bottom: 1px #000 dashed;
+}
+.wrapper {
+  position: relative;
 }

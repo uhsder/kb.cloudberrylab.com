@@ -21,7 +21,6 @@
     <script type="text/javascript" src="../js/prism.js"></script>
 </head>
 <body style="background-color: #eee;">
-  <a href="https://github.com/cloudberrylab/kb.cloudberrylab.com"><div class="forkme"></div></a>
   <div class="ui grid container stackable">
     <div id="searchmodal">
       <a href="#" class="close"><i class="icon remove"></i></a>
@@ -54,7 +53,8 @@
         {{ partial "navigation.html" . }}
       </div>
       <div class="twelve wide column">
-        <div class="ui container segment">
+        <div class="ui container segment wrapper">
+          <a href="https://github.com/cloudberrylab/kb.cloudberrylab.com/blob/master/content/kb{{ .Params.kbid }}.md"><div class="forkme" data-tooltip="Help us to improve quality of this article! Fork it on Github!" data-inverted="" data-position="left center"></div></a>
           <article>
             <div class="ui item">
               KB: {{ .Params.kbid }}
@@ -64,7 +64,6 @@
             {{ partial "content.html" . }}
           </article>
         </div>
-
         {{ partial "disqus.html" . }}
       </div>
     </div>
