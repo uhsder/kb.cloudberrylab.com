@@ -21,6 +21,7 @@ function initLunr() {
                 });
                 this.field("content");
                 this.field("kbid");
+                this.field("author");
 
                 // ref is the result item identifier (I chose the page URL)
                 this.ref("href");
