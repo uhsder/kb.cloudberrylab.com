@@ -5,10 +5,10 @@ var lunrIndex,
 // Initialize lunrjs using our generated index file
 function initLunr() {
     // First retrieve the index file
-    $.getJSON("js/lunr/PagesIndex.json")
+    $.getJSON("../js/lunr/PagesIndex.json")
         .done(function(index) {
             pagesIndex = index;
-            console.log("index:", pagesIndex);
+            // console.log("index:", pagesIndex);
 
             // Set up lunrjs by declaring the fields we use
             // Also provide their boost level for the ranking
@@ -90,7 +90,7 @@ function renderResults(results) {
         var $result = $("<li>");
         $result.append($("<a>", {
             href: result.href,
-            text: "KB" + result.kbid
+            text: "KB" + result.kbid + " | " + result.title
         }));
         $results.append($result);
     });

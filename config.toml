@@ -1,11 +1,13 @@
 languageCode = "en-us"
 title = "CloudBerry Lab Knowledge Base"
-baseurl = "http://kb.cloudberrylab.com.s3-website.eu-west-2.amazonaws.com"
+baseurl = "http://kb.cloudberrylab.com"
+disqusShortname = "eugenecloudberrylab"
 # theme = "mylearn"
 
 canonifyurls = true
 
-[params]
+[Params]
   h1 = "Knowledge Base"
   description = "The Knowledge Base contains articles written by the user community and CloudBerry engineers on services and products offered by CloudBerry Lab. Browse topics by category, or use the search box to find answers to your questions."
-  # mylearn = "Check out new <a href=/mylearn>videos</a> about Managed Backup Service"
+  mylearn = "Check out new <a href=/mylearn>videos</a> about Managed Backup Service"
+  ShowRelatedPost = true
