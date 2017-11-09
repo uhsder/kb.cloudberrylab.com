@@ -8,5 +8,5 @@ canonifyurls = true
 [Params]
   h1 = "Knowledge Base"
   description = "The Knowledge Base contains articles written by the user community and CloudBerry engineers on services and products offered by CloudBerry Lab. Browse topics by category, or use the search box to find answers to your questions."
-  mylearn = "Check out new <a href=/mylearn>videos</a> about Managed Backup Service"
+  mylearn = "Start using Managed Backup from <a href=https://www.cloudberrylab.com/managed-backup/signup.aspx>here</a>!"
   ShowRelatedPost = true

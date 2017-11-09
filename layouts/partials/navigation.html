@@ -45,7 +45,7 @@
 {{ if ne (relURL .URL) ("/" | safeHTML) }}
 	{{ if ne .Section "mylearn" }}
 		<p>{{ $.Site.Param "description" }}</p>
-		<p>{{ $.Site.Param "mylearn" | safeHTML }}</p>
+		<!-- <p>{{ $.Site.Param "mylearn" | safeHTML }}</p> -->
 	{{ end }}
 {{ end }}
 
