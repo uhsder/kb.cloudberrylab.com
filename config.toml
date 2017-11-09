@@ -3,7 +3,6 @@ title = "CloudBerry Lab Knowledge Base"
 baseurl = "http://kb.cloudberrylab.com"
 disqusShortname = "eugenecloudberrylab"
 # theme = "mylearn"
-
 canonifyurls = true
 
 [Params]
