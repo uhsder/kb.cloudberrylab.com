@@ -1,0 +1,86 @@
+{{ if eq .Section "mylearn" }}
+
+	<div class="ui ordered list">
+		{{ range .Site.Menus.mylearn }}
+			<li><a href="{{.URL}}">{{.Name}}</a></li>
+					{{ if .HasChildren }}
+					<ul>
+					{{ range .Children }}
+					<li><a href="{{.URL}}">{{ .Name }} </a></li>
+					{{ if .HasChildren }}
+						<ul>
+						{{ range .Children }}
+						<li><a href="{{.URL}}">{{ .Name }}</a></li>
+						{{ if .HasChildren }}
+							<ul>
+							{{ range .Children }}
+							<li><a href="{{.URL}}">{{ .Name }} </a></li>
+							{{ if .HasChildren }}
+								<ul>
+								{{ range .Children }}
+								<li><a href="{{.URL}}">{{ .Name }} </a></li>
+								{{ end }}
+								</ul>
+								{{ end }}
+							{{ end }}
+							</ul>
+							{{ end }}
+						{{ end }}
+						</ul>
+						{{ end }}
+					{{ end }}
+					</ul>
+					{{ end }}
+		{{end}}
+	</div>
+
+{{ end }}
+
+{{ if eq (relURL .URL) ("/" | safeHTML) }}
+	<h1>{{ $.Site.Param "h1" }}</h1>
+	<p>{{ $.Site.Param "description" }}</p>
+	<p>{{ $.Site.Param "mylearn" | safeHTML }}</p>
+{{ end }}
+
+{{ if ne (relURL .URL) ("/" | safeHTML) }}
+	{{ if ne .Section "mylearn" }}
+		<p>{{ $.Site.Param "description" }}</p>
+		<p>{{ $.Site.Param "mylearn" | safeHTML }}</p>
+	{{ end }}
+{{ end }}
+
+{{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+  {{ $.Scratch.Set "has_related" true }}
+{{ end }}
+
+
+{{ if $.Scratch.Get "has_related" }}
+    <h2>Related KBs:</h2>
+		<br />
+    {{ $num_to_show := .Site.Params.related_content_limit | default 7 }}
+    {{ range first $num_to_show (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+			<div class="column">
+		    <div class="ui card" style="min-height: 400px;">
+		      <div class="content">
+		        <a href="{{ .RelPermalink }}" class="ui orange right ribbon label">KB {{ .Params.kbid }}</a>
+		        <div class="meta"><i class="wait icon"></i> {{ .Date.Format "Jan 2, 2006" }}</div>
+		        <div class="header" style="margin-top: 5px;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+		        <div class="description">
+		          <p>{{ .Params.description }}</p>
+		        </div>
+		      </div>
+		      <div class="extra content">
+		        <div class="left floated">
+		          <a href="{{ .RelPermalink }}"><i class="angle double right icon"></i>Read more</a>
+		        </div>
+		        <div class="right floated author">
+		          <i class="user icon"></i> {{ .Params.Author }}
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+			<br />
+
+        <!-- <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li> -->
+      {{ end }}
+{{ end }}
