@@ -8,7 +8,7 @@ Welcome to CloudBerry Lab knowledge base (available (here)[http://kb.cloudberryl
 
 Fork the project and make changes as follows:
 
-* `images` - create subfolder `kb<number>` and place all your images.
+* `images` - create subfolder `kb<number>" and place all your images.
 * `content` - create file with `kb<number>.md` and place your content. Check previous KB to get list of required fields. Essentially the following fields required:
 
 ## An article structure
@@ -17,14 +17,14 @@ Your article should have the following minimal structure:
 
 ```
 ---
-title      : `<KB title>`
-description: `<Short description>`
-keywords   : `<List of keywords>`
-kbid       : `<KB number>`
-weight     : `<KB number for sort>`
-date       : `<Date of creation: YYYY-MM-DD>`
-updated_at : `<Date of update: YYYY-MM-DD>`
-author     : `<Author>`
+title      : "<KB title>"
+description: "<Short description>"
+keywords   : "<List of keywords>"
+kbid       : "<KB number>"
+weight     : "<KB number for sort>"
+date       : "<Date of creation: YYYY-MM-DD>"
+updated_at : "<Date of update: YYYY-MM-DD>"
+author     : "<Author>"
 ---
 
 ## Problem
@@ -36,6 +36,8 @@ Problem details.
 How to address the problem.
 
 ```
+
+You may need to escape double quote, backslashes, tildas.
 
 Article (`.md` file) structure follows Markdown syntax and you are free to use anything from the following list:
 
