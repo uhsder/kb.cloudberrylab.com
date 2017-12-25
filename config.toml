@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "CloudBerry Lab Knowledge Base"
-baseurl = "http://kb.cloudberrylab.com"
+baseurl = "https://kb.cloudberrylab.com"
 disqusShortname = "eugenecloudberrylab"
 # theme = "mylearn"
 canonifyurls = true
